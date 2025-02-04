@@ -1,7 +1,19 @@
 @import "tailwindcss";
 
 @layer base {
- body{
+  body {
+    background-color: oklch(0.97 0.001 106.424);
+  }
 
- }
+  button {
+    @apply px-4 py-2 border border-gray-300 rounded-lg shadow-sm text-gray-700 
+           bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 
+           focus:ring-green-500 focus:border-green-500 transition-all;
+  }
+
+  input{
+    @apply bg-white px-4 py-2 border border-gray-300 rounded-lg shadow-sm
+            focus:outline-none focus:ring-2 focus:ring-green-500
+          focus:border-green-500 transition-all
+  }
 }

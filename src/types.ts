@@ -1,4 +1,6 @@
 export interface ChatType{
   body: string,
-  subject: 'incoming' | 'outgoing' 
+  subject: 'incoming' | 'outgoing' | 'error',
+  id: string,
+  time: string
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
 
@@ -7,10 +8,13 @@ export default function Login() {
     apiTokenInstance: ''
   })
 
+  const navigate = useNavigate()
+
   function handleSubmit(){
     sessionStorage.setItem('apiUrl', `https://${input.idInstance.slice(0, 4)}.api.green-api.com`)
     sessionStorage.setItem('idInstance', input.idInstance)
     sessionStorage.setItem('apiTokenInstance', input.apiTokenInstance)
+    navigate('/message')
   }
 
   return (
