@@ -25,11 +25,7 @@ const router = createHashRouter([
     path: '/login',
     element: <Login />
   }
-  ],
-  {
-    basename: '/green-api'
-  }
-)
+])
 
 createRoot(document.getElementById('root')!).render(
   <RouterProvider router={router}/>
